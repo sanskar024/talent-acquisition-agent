@@ -205,20 +205,6 @@ Swapping a mock for the real thing is a one-file change in `app/services/`.
 
 ---
 
-## Resume bullet points (if you build on this)
-
-- *Architected a 6-agent recruitment automation system using LangGraph and
-  the Gemini API, combining semantic resume matching (FAISS + Hugging Face
-  embeddings) with an auditable, bias-aware decision pipeline.*
-- *Built a FastAPI + PostgreSQL backend orchestrating stateful multi-agent
-  workflows with automatic stage transitions and human-in-the-loop
-  escalation on fairness flags.*
-- *Exposed the pipeline as MCP tools, enabling agentic clients to search
-  candidates, check pipeline status, and score resumes via natural
-  language.*
-- *Implemented semantic resume-to-JD matching with a FAISS vector index,
-  replacing keyword search with cosine-similarity retrieval across skills
-  and experience.*
 
 ---
 
