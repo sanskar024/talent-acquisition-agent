@@ -8,7 +8,6 @@ agents, RAG-style semantic search, and bias-aware scoring.
 > GenAI projects (LangChain/LangGraph, FAISS, Hugging Face embeddings,
 > Gemini API, MCP), applied to a recruiting domain and served through
 > FastAPI.
-
 ---
 
 ## Why this exists
