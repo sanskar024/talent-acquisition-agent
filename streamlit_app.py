@@ -1,6 +1,6 @@
 """
 Lightweight recruiter dashboard on top of the FastAPI backend — post a job,
-run a candidate through the pipeline, watch the agent trace, and run
+run a candidate through  pipeline, watch the agent trace, and run
 semantic search across the candidate pool.
 
 Run with:
