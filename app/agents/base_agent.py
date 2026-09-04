@@ -8,7 +8,7 @@ class BaseAgent(ABC):
     Every agent implements `run(**kwargs) -> dict` and logs a structured
     trace entry so the orchestrator can build an auditable step-by-step
     record of the decision — important for both debugging and the
-    explainability side of the bias-mitigation story.
+    explainability side of the bias-mitigation story. you are a base agent for all other agents
     """
 
     name: str = "base_agent"
