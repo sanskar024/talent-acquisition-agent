@@ -14,7 +14,7 @@ from typing import List, Tuple
 import numpy as np
 
 from app.config import settings
-from app.services.embeddings import embed
+from app.services.embeddings import embed, to_numpy
 
 _INDEX_DIR = os.path.dirname(settings.faiss_index_path) or "."
 _META_PATH = settings.faiss_index_path + ".meta.pkl"
@@ -50,7 +50,7 @@ class CandidateVectorStore:
 
     def add(self, candidate_id: int, name: str | None, job_id: int, resume_text: str) -> None:
         self._ensure_loaded()
-        vector = embed(resume_text).astype("float32").reshape(1, -1)
+        vector = to_numpy(embed(resume_text)).reshape(1, -1)
         self._index.add(vector)
         self._metadata.append({"candidate_id": candidate_id, "name": name, "job_id": job_id})
         self._persist()
@@ -60,7 +60,7 @@ class CandidateVectorStore:
         if self._index.ntotal == 0:
             return []
 
-        query_vector = embed(query_text).astype("float32").reshape(1, -1)
+        query_vector = to_numpy(embed(query_text)).reshape(1, -1)
         scores, indices = self._index.search(query_vector, min(top_k, self._index.ntotal))
 
         results = []
