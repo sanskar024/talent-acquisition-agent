@@ -1,4 +1,4 @@
-# TalentFlow AI — Autonomous Multi-Agent Talent Acquisition System
+# TalentOrch_Agentlow AI — Autonomous Multi-Agent Talent Acquisition System
 
 An autonomous, multi-agent recruitment platform that automates the full hiring
 pipeline — from resume screening to hiring decisions — using coordinated LLM
